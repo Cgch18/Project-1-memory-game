@@ -66,12 +66,34 @@ function countDown() {
           clearInterval(countdown);
           document.getElementById('countdown').innerHTML = "Countdown stopped";
       }
-  }, 1000); 
+  }, 5000); 
 }
 countDown(); 
 
 
+const startButton = document.getElementById('start-button');
+const timerElement = document.getElementById('remaining-time');
 
+let remainingTime = 100; 
+let timerInterval; 
+
+function startTimer() {
+    timerElement.textContent = remainingTime;
+    timerInterval = setInterval(function() {
+        remainingTime--;
+        timerElement.textContent = remainingTime;
+
+        if (remainingTime === 0) {
+            clearInterval(timerInterval);
+          }
+    }, 1000); 
+}
+
+
+startButton.addEventListener('click', function() {
+    startButton.disabled = true;
+    startTimer();
+});
 
 
 // let selected:
