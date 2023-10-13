@@ -12,7 +12,8 @@ Memory Matching Worlds is a memory game that takes players on a global adventure
 - Implement the core gameplay mechanics, allowing players to flip cards by tapping on them. 
 Add logic to check for card matches when two cards are flipped. 
 - Implement a win condition that checks if all card pairs have been matched. Display a victory message when the game is won. 
-- Design and implement basic UI elements, including a start screen, game board, and a victory screen. -Include a simple button for start game. 
+- Design and implement basic UI elements, including a start screen, game board, and a victory screen.
+- Include a simple button for start game. 
 - Create a basic scoring system that tracks the number of moves or time taken to complete the game.
 
 
