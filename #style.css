@@ -1,0 +1,484 @@
+
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    background-image: url('https://images.rawpixel.com/image_1300/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3drNjIyMDM4MjgtaW1hZ2Uta3A2Ym1jYmIuanBn.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    height: 100%;
+    font-family:'Pixelify Sans', sans-serif;
+    text-align: center;
+    width: 100%;
+   
+}
+
+@font-face {
+    font-family:'Pixelify Sans', sans-serif;
+    src: url(sansation_light.woff);
+    font-weight: bold;
+} 
+
+.info-board {
+  background-color: transparent;
+  margin: 20px auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+.page-title {
+    text-align: center;
+    font-weight: normal;
+    color: rgba(210, 10, 217, 0.956);
+    font-size: 400%;
+    font-family:'Pixelify Sans', sans-serif;
+}
+
+.time-counter, .flip-counter {
+    color: rgb(189, 226, 43);
+    font-size: 300%;
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+html {
+    min-height: 100vh;
+}
+
+ #board {
+    display: grid;
+    grid-template-areas: 
+    'one two three four'
+    'five six seven eight'
+    'nine ten eleven twelve'
+    'thirteen fourteen fifteen sixteen'
+     ;
+    grid-template-columns: repeat(4, auto);
+    width: 50%;
+    margin: 40px auto;
+    grid-gap: 10px;
+    justify-content: center;
+    
+   
+    
+ }
+
+ 
+
+/* general container, card, and flip animation for each card*/
+.box {
+    border: 10px solid rgb(46, 195, 23);
+    position: relative;
+    height: 120px;
+    width: 120px;
+}
+
+.thecard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.thecard.is-flipped {
+  transform: rotateY(-180deg);
+}
+
+cards.shake {
+  animation: shake 0.35s ease-in-out;
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20%{
+    transform: translateX(-13px);
+  }
+  40%{
+    transform: translate(13px);
+  }
+  60%{
+    transform: translate(-8px);
+  }
+  80%{
+    transform: translate(8px);
+  }
+}
+
+/*Card one*/
+.front-card-one{
+  grid-area: one;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background: transparent;
+  background-image: url("https://mario.wiki.gallery/images/4/4d/MKT_Icon_GrandStar.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+
+.back-card-one{
+  grid-area: one;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/018/819/006/original/earth-cartoon-icon-png.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+  transform: rotateY(180deg);
+}
+
+/*Card two*/
+.front-card-two{
+  grid-area: two;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background: transparent;
+  background-image: url("https://mario.wiki.gallery/images/4/4d/MKT_Icon_GrandStar.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+
+.back-card-two{
+  grid-area: two;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/018/803/480/original/planet-venus-cartoon-icon-png.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+  transform: rotateY(180deg);
+}
+/*Card Three*/
+.front-card-three{
+  grid-area: three;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background: transparent;
+  background-image: url("https://mario.wiki.gallery/images/4/4d/MKT_Icon_GrandStar.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+.back-card-three{
+  grid-area: three;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/018/803/292/original/planet-uranus-cartoon-icon-png.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+  transform: rotateY(180deg);
+}
+/*Card Four*/
+.front-card-four{
+  grid-area: four;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background: transparent;
+  background-image: url("https://mario.wiki.gallery/images/4/4d/MKT_Icon_GrandStar.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+.back-card-four{
+  grid-area: four;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/018/803/009/original/planet-jupiter-cartoon-icon-png.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+  transform: rotateY(180deg);
+}
+/*Card Five*/
+.front-card-five{
+  grid-area: five;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background: transparent;
+  background-image: url("https://mario.wiki.gallery/images/4/4d/MKT_Icon_GrandStar.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+.back-card-five{
+  grid-area: five;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/018/802/709/original/mars-planet-cartoon-icon-png.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+  transform: rotateY(180deg);
+}
+/*Card Six*/
+.front-card-six{
+  grid-area: six;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background: transparent;
+  background-image: url("https://mario.wiki.gallery/images/4/4d/MKT_Icon_GrandStar.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+.back-card-six{
+  grid-area: six;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/018/800/623/original/mercury-planet-cartoon-icon-png.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+  transform: rotateY(180deg);
+}
+/*Card Seven*/
+.front-card-seven{
+  grid-area: seven;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background: transparent;
+  background-image: url("https://mario.wiki.gallery/images/4/4d/MKT_Icon_GrandStar.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+.back-card-seven{
+  grid-area: seven;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/018/801/992/original/saturn-planet-cartoon-icon-png.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+  transform: rotateY(180deg);
+}
+/*Card Eight*/
+.front-card-eight{
+  grid-area: eight;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background: transparent;
+  background-image: url("https://mario.wiki.gallery/images/4/4d/MKT_Icon_GrandStar.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+.back-card-eight{
+  grid-area: eight;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/018/802/708/original/planet-neptune-cartoon-icon-png.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+  transform: rotateY(180deg);
+}
+/*Card Nine*/
+.front-card-nine{
+  grid-area: nine;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background: transparent;
+  background-image: url("https://mario.wiki.gallery/images/4/4d/MKT_Icon_GrandStar.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+.back-card-nine{
+  grid-area: nine;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/018/803/292/original/planet-uranus-cartoon-icon-png.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+  transform: rotateY(180deg);
+}
+/*Card Ten*/
+.front-card-ten{
+  grid-area: ten;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background: transparent;
+  background-image: url("https://mario.wiki.gallery/images/4/4d/MKT_Icon_GrandStar.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+.back-card-ten{
+  grid-area: ten;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/018/801/992/original/saturn-planet-cartoon-icon-png.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+  transform: rotateY(180deg);
+}
+/*Card Eleven*/
+.front-card-eleven{
+  grid-area: eleven;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background: transparent;
+  background-image: url("https://mario.wiki.gallery/images/4/4d/MKT_Icon_GrandStar.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+.back-card-eleven{
+  grid-area: eleven;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/018/819/006/original/earth-cartoon-icon-png.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+  transform: rotateY(180deg);
+}
+/*Card Twelve*/
+.front-card-twelve{
+  grid-area: twelve;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background: transparent;
+  background-image: url("https://mario.wiki.gallery/images/4/4d/MKT_Icon_GrandStar.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+.back-card-twelve{
+  grid-area: twelve;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/018/802/709/original/mars-planet-cartoon-icon-png.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+  transform: rotateY(180deg);
+}
+/*Card Thirteen*/
+.front-card-thirteen{
+  grid-area: thirteen;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background: transparent;
+  background-image: url("https://mario.wiki.gallery/images/4/4d/MKT_Icon_GrandStar.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+.back-card-thirteen{
+  grid-area: thirteen;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/018/803/009/original/planet-jupiter-cartoon-icon-png.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+  transform: rotateY(180deg);
+}
+/*Card Fourteen*/
+.front-card-fourteen{
+  grid-area: fourteen;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background:transparent;
+  background-image: url("https://mario.wiki.gallery/images/4/4d/MKT_Icon_GrandStar.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+.back-card-fourteen{
+  grid-area: fourteen;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/018/803/480/original/planet-venus-cartoon-icon-png.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+  transform: rotateY(180deg);
+}
+/*Card Fifteen*/
+.front-card-fifteen{
+  grid-area: fifteen;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background: transparent;
+  background-image: url("https://mario.wiki.gallery/images/4/4d/MKT_Icon_GrandStar.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+.back-card-fifteen{
+  grid-area: fifteen;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/018/800/623/original/mercury-planet-cartoon-icon-png.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+  transform: rotateY(180deg);
+}
+/*Card Sixteen*/
+.front-card-sixteen{
+  grid-area: sixteen;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background: transparent;
+  background-image: url("https://mario.wiki.gallery/images/4/4d/MKT_Icon_GrandStar.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+}
+.back-card-sixteen{
+  grid-area: sixteen;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  backface-visibility: hidden;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/018/802/708/original/planet-neptune-cartoon-icon-png.png");
+  background-repeat: no-repeat; 
+  background-size: contain;
+  transform: rotateY(180deg);
+}
