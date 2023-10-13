@@ -1,39 +1,50 @@
-console.log('sanityCheck')
+console.log("sanityCheck");
 //Get all the elements by name "thecard" and stores them into an array
-const thecards =
-  document.getElementsByClassName("thecard");
+
+const thecards = document.getElementsByClassName("thecard");
 
 // //define an array that we can use to store clicks
- const clickedCards = [];
- // save 2 cards and compare to check for match
- 
-console.log(clickedCards)
+let clickedCards = [];
+
+// save 2 cards and compare to check for match
+let flips = 0;
+console.log(clickedCards);
+
 // //declare a variable to score the users code
 const usersCode = 0;
-// Loop through the array of cards and add an event listener function to each card that triggers the flip when the card is clicked
+
+// Loop through the array of cards and add an eventListener function to each card that triggers the flip when the card is clicked
 for (let i = 0; i < thecards.length; i++) {
-  (function(index) {
-    thecards[index].addEventListener("click", function(e) {
-      thecards[index].classList.toggle("is-flipped");
-   clickedCards.push(e.target);
-      console.log(clickedCards);
-    //console.log the background image property of the card that has been clicked on
-      // console.log(thecards[index].style.backgroundImage);
-    //add the background image the array of the cards
-    // const cardImage =                   
-    // url("./https://mario.wiki.gallery/images/4/4d/MKT_Icon_GrandStar.png")
-    // url("./https://static.vecteezy.com/system/resources/previews/018/819/006/original/earth-cartoon-icon-png.png")
-    //   ];
-      
-    //if there is only one thing in the array we are not going to do anything
-      
-    // if there are two things in the array we are going to compare it to the other thing in the array
-    //if they are the same we are gonna have them open and we are gonna give the user a point
-      //if they are not the same we are going to flip the cards over
-     //in both cases we are going to have to clear the array
-      //if the user scores 8 points they win
-    });
-  })(i);
+  thecards[i].addEventListener("click", 
+  
+  function (event) {
+    thecards[i].classList.toggle("flip-card");
+    flips++;
+    document.getElementById("flip").innerHTML = flips;
+
+    clickedCards.push(i);
+    console.log(clickedCards);
+
+    if (clickedCards.length == 2) {
+      checkMatch(thecards, clickedCards);
+      clickedCards = [];
+    }
+  }
+  
+  );
+}
+
+function checkMatch(thecards, clickedCards){
+  if (thecards[clickedCards[0]].id != thecards[clickedCards[1]].id) {
+    console.log("Cards don't match");
+    setTimeout(()=>{
+      thecards[clickedCards[0]].classList.toggle("flip-card");
+      thecards[clickedCards[1]].classList.toggle("flip-card");
+    }, 1000);
+  }
+  else {
+    console.log("Cards matched");
+  }
 }
 
 // let selected:
@@ -49,12 +60,11 @@ for (let i = 0; i < thecards.length; i++) {
 //   })
 // }
 
-
 // const matchCards = function () {
 //   let cards = document.querySelectorAll(".thecard");
 //   let first;
 //   let second;
-  
+
 // }
 
 // const board = document.querySelector(".board")
@@ -65,12 +75,6 @@ for (let i = 0; i < thecards.length; i++) {
 
 // document.querySelector(".score").textContent = score;
 // fetch()
-
-
-
-
-
-
 
 // thecards[i].addEventListener("click", function (i) {
 //     console.log("You clicked on " + thecards[i]);

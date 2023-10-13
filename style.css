@@ -86,7 +86,7 @@ html {
   cursor: pointer;
 }
 
-.thecard.is-flipped {
+.thecard.flip-card {
   transform: rotateY(-180deg);
 }
 
