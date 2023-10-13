@@ -56,6 +56,24 @@ function checkMatch(thecards, clickedCards){
   }
 }
 
+function countDown() {
+  let seconds = 100;
+  const countdown = setInterval(function() {
+      document.getElementById('remaining-time').innerHTML = seconds;
+      seconds--;
+
+      if (seconds < 0) {
+          clearInterval(countdown);
+          document.getElementById('countdown').innerHTML = "Countdown stopped";
+      }
+  }, 1000); 
+}
+countDown(); 
+
+
+
+
+
 // let selected:
 //   for (const card of cards) {
 //   card.addEventListener("click" , function() {

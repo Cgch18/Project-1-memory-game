@@ -45,6 +45,20 @@ body {
     margin-right: 15px;
 }
 
+#start-button {
+  background-color: #007bff; 
+    color: #fff; 
+    font-size: 18px; 
+    padding: 10px 20px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 5px; 
+}
+
+#start-button:hover {
+  background-color: #0056b3; /* Change color on hover */
+}
+
 html {
     min-height: 100vh;
 }
