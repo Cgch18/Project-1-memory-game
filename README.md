@@ -1,6 +1,6 @@
-# Memory Matching Worlds
+# Memory Matching Planets
  ---
-## Memory Worlds
+## Memory Planets
 
 Memory Matching Worlds is a memory game that takes players on a global adventure. Players travel to various countries and landmarks to uncover matching pairs of iconic symbols, objects, and cultural items.This game will be simplistic which the wire frames will be intentionally kept simple, using basic shapes, lines, and placeholders to represent elements like buttons, text fields, images, and navigation menus.
 
