@@ -1,9 +1,11 @@
+console.log('sanityCheck')
 //Get all the elements by name "thecard" and stores them into an array
 const thecards =
   document.getElementsByClassName("thecard");
 
 // //define an array that we can use to store clicks
  const clickedCards = [];
+ // save 2 cards and compare to check for match
  
 console.log(clickedCards)
 // //declare a variable to score the users code
