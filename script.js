@@ -51,7 +51,7 @@ function checkMatch(thecards, clickedCards){
   else {
     console.log("Cards matched");
     cardsMatched++;
-    // code to disable click listener
+    
     console.log();
   }
 }
@@ -66,7 +66,7 @@ function countDown() {
           clearInterval(countdown);
           document.getElementById('countdown').innerHTML = "Countdown stopped";
       }
-  }, 5000); 
+  }, 100000); 
 }
 countDown(); 
 
