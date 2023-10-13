@@ -20,7 +20,6 @@ Add logic to check for card matches when two cards are flipped.
 ---
 #### Stretch Goals
  - Ensure the game can be played seamlessly across various platforms, including mobile devices and web browsers. 
- - Add how many mistakes you made on not able to match the correct countries and landmarks 
  - Create a level-based system where players progress through increasingly difficult levels, each with a unique set of challenges.
 
 
