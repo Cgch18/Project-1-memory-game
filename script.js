@@ -8,6 +8,10 @@ let clickedCards = [];
 
 // save 2 cards and compare to check for match
 let flips = 0;
+
+//Check how many cards the players has matched 
+let cardsMatched = 0;
+
 console.log(clickedCards);
 
 // //declare a variable to score the users code
@@ -15,23 +19,31 @@ const usersCode = 0;
 
 // Loop through the array of cards and add an eventListener function to each card that triggers the flip when the card is clicked
 for (let i = 0; i < thecards.length; i++) {
-  thecards[i].addEventListener("click", 
-  
-  function (event) {
-    thecards[i].classList.toggle("flip-card");
-    flips++;
-    document.getElementById("flip").innerHTML = flips;
+  console.log("executing for loop");
+  thecards[i].addEventListener("click", flipCard(i));
+}
+              
+function flipCard(i) {
+  console.log("executing flip");
+  thecards[i].classList.toggle("flip-card");
+  flips++;
+  document.getElementById("flip").innerHTML = flips;
 
-    clickedCards.push(i);
-    console.log(clickedCards);
+  clickedCards.push(i);
+  console.log(clickedCards);
 
-    if (clickedCards.length == 2) {
-      checkMatch(thecards, clickedCards);
-      clickedCards = [];
-    }
+  if (clickedCards.length == 2) {
+    checkMatch(thecards, clickedCards);
+    clickedCards = [];
   }
-  
-  );
+}
+
+
+let secs = 100;
+//function countdown ()
+
+function toggleFlip(index) {
+
 }
 
 function checkMatch(thecards, clickedCards){
@@ -44,6 +56,7 @@ function checkMatch(thecards, clickedCards){
   }
   else {
     console.log("Cards matched");
+    cardsMatched++;
   }
 }
 
