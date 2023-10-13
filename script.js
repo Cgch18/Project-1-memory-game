@@ -20,8 +20,9 @@ const usersCode = 0;
 // Loop through the array of cards and add an eventListener function to each card that triggers the flip when the card is clicked
 for (let i = 0; i < thecards.length; i++) {
   console.log("executing for loop");
-  thecards[i].addEventListener("click", flipCard(thecards[i]));
+  thecards[i].addEventListener("click", flipCard(thecards[i], i));
 }
+
 
 function flipCard(passedInElement, index){
   return function(e) {
@@ -45,11 +46,13 @@ function checkMatch(thecards, clickedCards){
     setTimeout(()=>{
       thecards[clickedCards[0]].classList.toggle("flip-card");
       thecards[clickedCards[1]].classList.toggle("flip-card");
-    }, 700);
+    }, 1000);
   }
   else {
     console.log("Cards matched");
     cardsMatched++;
+    // code to disable click listener
+    console.log();
   }
 }
 
