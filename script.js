@@ -56,7 +56,7 @@ function checkMatch(thecards, clickedCards){
     
     console.log();
   }
-}
+}}
 
 // if (cardsMatched === thecards.length / 2) {
 
