@@ -47,6 +47,8 @@ function checkMatch(thecards, clickedCards){
       thecards[clickedCards[0]].classList.toggle("flip-card");
       thecards[clickedCards[1]].classList.toggle("flip-card");
     }, 1000);
+    if (cardsMatched === thecards.length / 2) {
+        checkWing();
   }
   else {
     console.log("Cards matched");
@@ -55,6 +57,7 @@ function checkMatch(thecards, clickedCards){
     console.log();
   }
 }
+
 // if (cardsMatched === thecards.length / 2) {
 
 //   gameOver();
@@ -100,30 +103,40 @@ startButton.addEventListener('click', function() {
 });
 
 
-function checkMatch(clickedCards) {
-  if (clickedCards[0].id === clickedCards[1].id) {
-    console.log("Cards matched");
-    cardsMatched++;
+// function checkMatch(clickedCards) {
+//   if (clickedCards[0].id === clickedCards[1].id) {
+//     console.log("Cards matched");
+//     cardsMatched++;
 
-
+//   if (cardsMatched === thecards.length / 2) {
+//       handleWin();
+//     }
+//   } else {
+//     console.log("Cards don't match");
+//     setTimeout(() => {
+//       clickedCards[0].classList.toggle("flip-card");
+//       clickedCards[1].classList.toggle("flip-card");
+//     }, 1000);
+//   }
+// }
 
 
 
 // // In the checkWin() function
-// function checkWin() {
+function checkWin() {
 //   // Check if all ace piles contain 16 cards each, indicating a win
-//   if (acePiles.every(acePile => acePile.length === 16)) {
-//       winState = true;
+  if (acePiles.every(acePile => acePile.length === 16)) {
+      winState = true;
 
-// const winMessage = document.createElement('div');
-//   winMessage.textContent = 'Congratulations! You have won the game!';
-//   document.body.appendChild(winMessage);
-
-      // TODO: Use DOM manipulation methods to display a win message.
-      // Consider creating a new div element, setting its text content and appending it to the body or another container element on the page.
+const winMessage = document.createElement('div');
+  winMessage.textContent = 'Congratulations! You have won the game!';
+  document.body.appendChild(winMessage);
   }
 }
 
+      // TODO: Use DOM manipulation methods to display a win message.
+      // Consider creating a new div element, setting its text content and appending it to the body or another container element on the page.
+  
 
 
 
