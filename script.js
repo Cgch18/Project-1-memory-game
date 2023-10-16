@@ -102,8 +102,8 @@ startButton.addEventListener('click', function() {
 
 // In the checkWin() function
 function checkWin() {
-  // Check if all ace piles contain 13 cards each, indicating a win
-  if (acePiles.every(acePile => acePile.length === 13)) {
+  // Check if all ace piles contain 16 cards each, indicating a win
+  if (acePiles.every(acePile => acePile.length === 16)) {
       winState = true;
 
       // TODO: Use DOM manipulation methods to display a win message.
