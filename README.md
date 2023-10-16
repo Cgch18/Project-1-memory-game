@@ -1,12 +1,7 @@
 # Memory Matching Planets
  ---
 ## Memory Planets
-
-<<<<<<< HEAD
-Memory Matching PLanets is a memory game that takes players on a global adventure. Players travel to various countries and landmarks to uncover matching pairs of iconic symbols, objects, and cultural items.This game will be simplistic which the wire frames will be intentionally kept simple, using basic shapes, lines, and placeholders to represent elements like buttons, text fields, images, and navigation menus.
-=======
 Memory Matching Planets is a memory game . Players will be able to match the different planets in the solar system.This game will be simplistic which the wire frames will be intentionally kept simple, using basic shapes, lines, and placeholders to represent elements like buttons, text fields, images, and navigation menus.
->>>>>>> 8b8d62c9dfe2c51214f7c0a772f3340727b8d073
 
 
 ---
