@@ -48,7 +48,7 @@ function checkMatch(thecards, clickedCards){
       thecards[clickedCards[1]].classList.toggle("flip-card");
     }, 1000);
     if (cardsMatched === thecards.length / 2) {
-        checkWing();
+        checkWin();
   }
   else {
     console.log("Cards matched");
@@ -128,7 +128,7 @@ function checkWin() {
   if (acePiles.every(acePile => acePile.length === 16)) {
       winState = true;
 
-const winMessage = document.createElement('div');
+const winMessage = document.createElement('win-Message');
   winMessage.textContent = 'Congratulations! You have won the game!';
   document.body.appendChild(winMessage);
   }
