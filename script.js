@@ -55,6 +55,10 @@ function checkMatch(thecards, clickedCards){
     console.log();
   }
 }
+// if (cardsMatched === thecards.length / 2) {
+
+//   gameOver();
+// }
 
 function countDown() {
   let seconds = 100;
@@ -94,6 +98,25 @@ startButton.addEventListener('click', function() {
     startButton.disabled = true;
     startTimer();
 });
+
+
+// In the checkWin() function
+function checkWin() {
+  // Check if all ace piles contain 13 cards each, indicating a win
+  if (acePiles.every(acePile => acePile.length === 13)) {
+      winState = true;
+
+      // TODO: Use DOM manipulation methods to display a win message.
+      // Consider creating a new div element, setting its text content and appending it to the body or another container element on the page.
+  }
+}
+
+
+
+
+
+
+
 
 
 // let selected:
