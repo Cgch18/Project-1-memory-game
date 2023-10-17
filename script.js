@@ -9,9 +9,6 @@ let clickedCards = [];
 // save 2 cards and compare to check for match
 let flips = 0;
 
-//Check how many cards the players has matched 
-let cardsMatched = 0;
-
 console.log(clickedCards);
 
 // //declare a variable to score the users code
@@ -40,6 +37,9 @@ function flipCard(passedInElement, index){
   };
 }
 
+//Check how many cards the players has matched 
+let cardsMatched = 0;
+
 function checkMatch(thecards, clickedCards){
   if (thecards[clickedCards[0]].id != thecards[clickedCards[1]].id) {
     console.log("Cards don't match");
@@ -47,16 +47,13 @@ function checkMatch(thecards, clickedCards){
       thecards[clickedCards[0]].classList.toggle("flip-card");
       thecards[clickedCards[1]].classList.toggle("flip-card");
     }, 1000);
-    if (cardsMatched === thecards.length / 2) {
-        checkWin();
   }
   else {
     console.log("Cards matched");
     cardsMatched++;
-    
-    console.log();
+    checkWin();
   }
-}}
+}
 
 // if (cardsMatched === thecards.length / 2) {
 
@@ -75,6 +72,7 @@ function countDown() {
       }
   }, 100000); 
 }
+
 countDown(); 
 
 
@@ -118,13 +116,17 @@ startButton.addEventListener('click', function() {
 //       clickedCards[1].classList.toggle("flip-card");
 //     }, 1000);
 //   }
-// }
-
-
+// 
 
 // // In the checkWin() function
 function checkWin() {
 //   // Check if all ace piles contain 16 cards each, indicating a win
+
+if (cardsMatched == 16) {
+
+}
+
+
   if (acePiles.every(acePile => acePile.length === 16)) {
       winState = true;
 
@@ -133,6 +135,7 @@ const winMessage = document.createElement('win-Message');
   document.body.appendChild(winMessage);
   }
 }
+console.log(checkWin);
 
       // TODO: Use DOM manipulation methods to display a win message.
       // Consider creating a new div element, setting its text content and appending it to the body or another container element on the page.
