@@ -20,13 +20,16 @@ Add logic to check for card matches when two cards are flipped.
 #### Stretch Goals
  - Ensure the game can be played seamlessly across various platforms, including mobile devices and web browsers. 
  - Create a level-based system where players progress through increasingly difficult levels, each with a unique set of challenges.
-
+ - Difficulty Levels: Include different difficulty levels to cater to players of varying skill levels. Easy, medium, and hard modes can provide a more rewarding experience for players looking for a challenge.
+ 
 
 ---
 ### Road Blocks
 - Creating the second level with more tiles or squares
 - Making the UI
 - Making a custom background
+- Going through the Winning combinations and being able to make the win window pop up
+- 
 
 ---
 ##### Tech stacks

@@ -123,7 +123,7 @@ function checkWin() {
 //   // Check if all ace piles contain 16 cards each, indicating a win
   console.log(cardsMatched);
   if (cardsMatched == 8) {
-    window.alert("YOU GAY BRO...");
+    window.alert("YOU WIN!!!!!");
   }
 }
 //   if (acePiles.every(acePile => acePile.length === 16)) {
