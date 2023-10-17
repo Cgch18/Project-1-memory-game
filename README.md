@@ -29,7 +29,6 @@ Add logic to check for card matches when two cards are flipped.
 - Making the UI
 - Making a custom background
 - Going through the Winning combinations and being able to make the win window pop up
-- 
 
 ---
 ##### Tech stacks
