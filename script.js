@@ -121,21 +121,18 @@ startButton.addEventListener('click', function() {
 // // In the checkWin() function
 function checkWin() {
 //   // Check if all ace piles contain 16 cards each, indicating a win
-
-if (cardsMatched == 16) {
-
-}
-
-
-  if (acePiles.every(acePile => acePile.length === 16)) {
-      winState = true;
-
-const winMessage = document.createElement('win-Message');
-  winMessage.textContent = 'Congratulations! You have won the game!';
-  document.body.appendChild(winMessage);
+  console.log(cardsMatched);
+  if (cardsMatched == 8) {
+    window.alert("YOU GAY BRO...");
   }
 }
-console.log(checkWin);
+//   if (acePiles.every(acePile => acePile.length === 16)) {
+//       winState = true;
+
+// const winMessage = document.createElement('win-Message');
+//   winMessage.textContent = 'Congratulations! You have won the game!';
+//   document.body.appendChild(winMessage);
+//   }
 
       // TODO: Use DOM manipulation methods to display a win message.
       // Consider creating a new div element, setting its text content and appending it to the body or another container element on the page.
